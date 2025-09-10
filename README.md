@@ -1,35 +1,37 @@
-# Student Enrollment and Completion Analysis
+# Career Track Analysis with SQL and Tableau
 
-## Overview
+## Project Overview
 
-This project analyzes student enrollments and completions in data-related career tracks offered by 365 Data Science. Utilizing SQL for data extraction and Tableau for visualization, the goal is to gain insights into student behavior, track popularity, and completion rates, thereby enhancing 365 Data Science's educational offerings.
+This project involves analyzing student enrollments and completions in data-related career tracks offered by 365 Data Science. The analysis is performed using SQL for data extraction and Tableau for visualization. The goal is to gain insights into student behavior, track popularity, and completion rates to help 365 Data Science improve their educational offerings.
 
 ## Project Structure
 
-1. **SQL Data Extraction:** Extract data from the SQL database.
-2. **Tableau Visualizations:** Generate visual insights from the extracted data.
-3. **Analysis and Recommendations:** Analyze results and suggest improvements.
+- **SQL Data Extraction**: Extract necessary data from the provided SQL database.
+- **Tableau Visualizations**: Create insightful visualizations to interpret the data.
+- **Analysis and Recommendations**: Analyze the results and provide recommendations for improvement.
 
-## Repository Files
+## Files in the Repository
 
-- `sql_and_tableau.sql`: SQL file for database creation and data population.
-- `career_track_completions.csv`: Dataset extracted via SQL for Tableau use.
+- `sql_and_tableau.sql`: The SQL file used to create and populate the database.
+- `career_track_completions.csv`: The dataset extracted using SQL, which is then used in Tableau.
 
 ## SQL Data Extraction
 
 ### Database Tables
 
 - **career_track_info**
-  - `track_id`: Unique track identifier.
-  - `track_name`: Name of the track.
+  - `track_id`: The unique identification of a track.
+  - `track_name`: The name of the track.
 
 - **career_track_student_enrollments**
-  - `student_id`: Unique student identifier.
-  - `track_id`: Track identifier.
-  - `date_enrolled`: Enrollment date.
-  - `date_completed`: Completion date (NULL if incomplete).
+  - `student_id`: The unique identification of a student.
+  - `track_id`: The unique identification of a track.
+  - `date_enrolled`: The date the student enrolled in the track.
+  - `date_completed`: The date the student completed the track (NULL if not completed).
 
 ### SQL Query
+
+The following SQL query extracts the required data and prepares it for visualization in Tableau:
 
 ```sql
 SELECT 
@@ -72,30 +74,48 @@ FROM
 ) a;
 ```
 
-### Export
+### Export to CSV
 
-The query results are exported to `career_track_completions.csv`.
+The result of the above query is exported as `career_track_completions.csv`.
 
 ## Tableau Visualizations
 
 ### Combo Chart
-- **Bar Chart:** Number of track enrollments per month.
-- **Line Chart:** Percentage of completions per month.
 
-#### Steps:
-1. Import `career_track_completions.csv` into Tableau.
-2. Create bar and line charts, utilize dual axis and format accordingly.
-3. Filter data by career track.
+- **Bar Chart**: Represents the number of track enrollments per month.
+- **Line Chart**: Displays the fraction of track completions per month as a percentage of enrollments.
+
+### Steps to Create Combo Chart in Tableau
+
+1. **Connect to Data Source**: Import `career_track_completions.csv` into Tableau.
+2. **Create Bar Chart**: Drag `Date Enrolled` to Columns (set to MONTH), drag `student_track_id` to Rows (set to COUNT).
+3. **Create Line Chart**: Drag `track_completed` to Rows next to `student_track_id` and change to Line Chart.
+4. **Dual Axis**: Right-click the axis and select Dual Axis.
+5. **Format Line Chart Axis**: Set to Percentage.
+6. **Filter by Career Track**: Drag `track_name` to Filters and show filter.
 
 ### Completion Bucket Bar Chart
-- Bars represent completion buckets by completion count.
 
-#### Steps:
-1. Create bar chart with `completion_bucket` and `student_track_id`.
-2. Order and filter data appropriately.
+- Each bar represents a different completion bucket with their height corresponding to the number of track completions.
+
+### Steps to Create Completion Bucket Bar Chart in Tableau
+
+1. **Create Bar Chart**: Drag `completion_bucket` to Columns and `student_track_id` to Rows (set to COUNT).
+2. **Remove NULL Values**: Ensure the NULL values are removed.
+3. **Order Bars**: Same day, 1 to 7 days, 8 to 30 days, 31 to 60 days, 61 to 90 days, 91 to 365 days, 366+ days.
+4. **Filter by Career Track**: Drag `track_name` to Filters and show filter.
+
+![image](https://github.com/user-attachments/assets/e038feab-f7a6-4390-a7d1-c12074539e1b)
+![image](https://github.com/user-attachments/assets/bd9d16d6-ddd5-4f11-9d6d-2eb6a4c2b531)
+![image](https://github.com/user-attachments/assets/3eeac4eb-0406-44aa-87ab-e6c00361de51)
 
 ## Conclusion
 
-This analysis provides insights into enrollment patterns and completion rates, enabling 365 Data Science to refine their educational offerings and support student success.
+This project provides valuable insights into student enrollments and completions in data-related career tracks. By analyzing these patterns, we can help 365 Data Science improve their offerings and better support their students.
 
-[Download README](#)
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details.
+
+<kbd>Enjoy Code</kbd> 👨‍💻
+[My portfolio](https://ayoub-etoullali.netlify.app/)
