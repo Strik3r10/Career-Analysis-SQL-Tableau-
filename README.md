@@ -113,9 +113,7 @@ The result of the above query is exported as `career_track_completions.csv`.
 
 This project provides valuable insights into student enrollments and completions in data-related career tracks. By analyzing these patterns, we can help 365 Data Science improve their offerings and better support their students.
 
-## License
 
-This project is licensed under the MIT License - see the LICENSE.md file for details.
-
-<kbd>Enjoy Code</kbd> 👨‍💻
-[My portfolio](https://ayoub-etoullali.netlify.app/)
+## Authors
+[![Owais Farooqui](https://img.shields.io/badge/Owais_Farooqui-0A2540?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Strik3r10)
+[![Connect](https://img.shields.io/badge/Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/owais-farooqui-942281256/)
