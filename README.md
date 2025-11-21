@@ -4,11 +4,15 @@
 
 This project involves analyzing student enrollments and completions in data-related career tracks offered by 365 Data Science. The analysis is performed using SQL for data extraction and Tableau for visualization. The goal is to gain insights into student behavior, track popularity, and completion rates to help 365 Data Science improve their educational offerings.
 
+---
+
 ## Project Structure
 
 - **SQL Data Extraction**: Extract necessary data from the provided SQL database.
 - **Tableau Visualizations**: Create insightful visualizations to interpret the data.
 - **Analysis and Recommendations**: Analyze the results and provide recommendations for improvement.
+
+---
 
 ## 🗃️ Files in the Repository
 
@@ -19,6 +23,8 @@ This project involves analyzing student enrollments and completions in data-rela
 | `mysql.sql` | Database schema creation |
 | `.twb / .twbx` | Tableau workbook (Dashboard) |
 | `README.md` | Project documentation |
+
+---
 
 
 ## SQL Data Extraction
@@ -34,6 +40,8 @@ This project involves analyzing student enrollments and completions in data-rela
   - `track_id`: The unique identification of a track.
   - `date_enrolled`: The date the student enrolled in the track.
   - `date_completed`: The date the student completed the track (NULL if not completed).
+ 
+  ---
 
 ### SQL Query
 
@@ -84,6 +92,8 @@ FROM
 
 The result of the above query is exported as `career_track_completions.csv`.
 
+---
+
 
 ### Combo Chart
 
@@ -103,6 +113,9 @@ The result of the above query is exported as `career_track_completions.csv`.
 
 - Each bar represents a different completion bucket with their height corresponding to the number of track completions.
 
+---
+
+
 ## Dashboard Preview
 
 Below is a preview of the dashboard created for the Bike Store project:
@@ -112,6 +125,9 @@ Below is a preview of the dashboard created for the Bike Store project:
 ![Dashboard Preview](https://github.com/user-attachments/assets/bd9d16d6-ddd5-4f11-9d6d-2eb6a4c2b531)
 
 ![Dashboard Preview](https://github.com/user-attachments/assets/3eeac4eb-0406-44aa-87ab-e6c00361de51)
+
+
+---
 
 
 ### ❓ Key Inisghts
@@ -131,25 +147,33 @@ Below is a preview of the dashboard created for the Bike Store project:
 **Q5: Which career track is the most popular among learners?**  
 📌 **Data Analyst** is the most popular, followed by **Data Scientist**.
 
+---
 
 
+### 🧩 Strategic Actions (Based on Insights)
 
-### 💡 Recommended Actions (Data-Driven)
+➡️ **Is completion rate low among long-duration learners (91–365 days)?**
+✔ Launch mentorship + scheduled reminders  
+🎯 Expected Impact: **~30% completion boost**
 
-**Q1: How can course completion rates be improved?**  
-📌 Provide targeted mentorship & reminders for **long-duration learners (91–365 days)** to boost completions by **~30%**.
+➡️ **Do learners lack motivation to finish?**
+✔ Add tiered certifications (badges → exams → interview prep)  
+🎯 Builds urgency + skill credibility
 
-**Q2: What pricing or certification strategy could help?**  
-📌 Offer **tiered certification perks** (badges, proof-of-skill tests, mock interviews) to motivate learners to finish.
+➡️ **Is engagement dropping mid-track?**
+✔ Set weekly goals + app/email nudges  
+🎯 Consistent habit formation → higher completion
 
-**Q3: How can platform engagement be increased?**  
-📌 Introduce **weekly learning goals** + **email or app nudges**, especially during months with low completion trends.
+➡️ **Which track should be prioritized for marketing?**
+✔ Focus promo on **Data Analyst Track** (highest enrollment)  
+🎯 Maximum ROI on acquisition campaigns
 
-**Q4: Where should marketing focus?**  
-📌 Promote **Data Analyst programs** in campaigns since it’s the most in-demand track and has the highest enrollment.
+➡️ **Why are some learners stuck for months?**
+✔ Implement AI learning paths + weak-topic suggestions  
+🎯 Faster progression, fewer drop-offs
 
-**Q5: What support feature could reduce delays?**  
-📌 Use **AI-based personalized learning paths** that recommend topics or fix weak areas to shorten completion time.
+
+---
 
 
 ### 📈 Business Impact
@@ -161,10 +185,15 @@ If implemented, these recommendations could:
 ✔ Boost revenue via demand-driven program promotion (Data Analyst)### 📈 Business Impact
 
 
+---
+
+
 ## Conclusion
 
 This analysis provides clear visibility into learner habits and bottlenecks.
 By focusing on slow-track learners and optimizing content delivery time, course providers can improve completion rates and engagement efficiently.
+
+---
 
 
 ## Authors
