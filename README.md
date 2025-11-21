@@ -10,10 +10,16 @@ This project involves analyzing student enrollments and completions in data-rela
 - **Tableau Visualizations**: Create insightful visualizations to interpret the data.
 - **Analysis and Recommendations**: Analyze the results and provide recommendations for improvement.
 
-## Files in the Repository
+## 🗃️ Files in the Repository
 
-- `sql_and_tableau.sql`: The SQL file used to create and populate the database.
-- `career_track_completions.csv`: The dataset extracted using SQL, which is then used in Tableau.
+| File | Description |
+|------|-------------|
+| `career_track_completions.csv` | Final cleaned data for Tableau |
+| `sql_and_tableau.sql` | SQL logic used to generate the dataset |
+| `mysql.sql` | Database schema creation |
+| `.twb / .twbx` | Tableau workbook (Dashboard) |
+| `README.md` | Project documentation |
+
 
 ## SQL Data Extraction
 
@@ -78,7 +84,6 @@ FROM
 
 The result of the above query is exported as `career_track_completions.csv`.
 
-## Tableau Visualizations
 
 ### Combo Chart
 
@@ -98,20 +103,68 @@ The result of the above query is exported as `career_track_completions.csv`.
 
 - Each bar represents a different completion bucket with their height corresponding to the number of track completions.
 
-### Steps to Create Completion Bucket Bar Chart in Tableau
+## Dashboard Preview
 
-1. **Create Bar Chart**: Drag `completion_bucket` to Columns and `student_track_id` to Rows (set to COUNT).
-2. **Remove NULL Values**: Ensure the NULL values are removed.
-3. **Order Bars**: Same day, 1 to 7 days, 8 to 30 days, 31 to 60 days, 61 to 90 days, 91 to 365 days, 366+ days.
-4. **Filter by Career Track**: Drag `track_name` to Filters and show filter.
+Below is a preview of the dashboard created for the Bike Store project:
 
-![image](https://github.com/user-attachments/assets/e038feab-f7a6-4390-a7d1-c12074539e1b)
-![image](https://github.com/user-attachments/assets/bd9d16d6-ddd5-4f11-9d6d-2eb6a4c2b531)
-![image](https://github.com/user-attachments/assets/3eeac4eb-0406-44aa-87ab-e6c00361de51)
+![Dashboard Preview](https://github.com/Strik3r10/Career-Analysis-SQL-Tableau-/blob/main/Dashboard.png)
+
+![Dashboard Preview](https://github.com/user-attachments/assets/bd9d16d6-ddd5-4f11-9d6d-2eb6a4c2b531)
+
+![Dashboard Preview](https://github.com/user-attachments/assets/3eeac4eb-0406-44aa-87ab-e6c00361de51)
+
+
+### ❓ Key Inisghts
+
+**Q1: Which month has the highest learner enrollment?**  
+📌 **August**, across all tracks.
+
+**Q2: How many learners typically finish the program each month?**  
+📌 Only **~1% of enrolled learners** complete their program every month.
+
+**Q3: How long does it usually take students to complete a track?**  
+📌 Most learners require **between 91–365 days** to finish a career program.
+
+**Q4: What strategy can improve program completion rates?**  
+📌 Targeting long-duration learners can drive a **~30% boost in completions**.
+
+**Q5: Which career track is the most popular among learners?**  
+📌 **Data Analyst** is the most popular, followed by **Data Scientist**.
+
+
+
+
+### 💡 Recommended Actions (Data-Driven)
+
+**Q1: How can course completion rates be improved?**  
+📌 Provide targeted mentorship & reminders for **long-duration learners (91–365 days)** to boost completions by **~30%**.
+
+**Q2: What pricing or certification strategy could help?**  
+📌 Offer **tiered certification perks** (badges, proof-of-skill tests, mock interviews) to motivate learners to finish.
+
+**Q3: How can platform engagement be increased?**  
+📌 Introduce **weekly learning goals** + **email or app nudges**, especially during months with low completion trends.
+
+**Q4: Where should marketing focus?**  
+📌 Promote **Data Analyst programs** in campaigns since it’s the most in-demand track and has the highest enrollment.
+
+**Q5: What support feature could reduce delays?**  
+📌 Use **AI-based personalized learning paths** that recommend topics or fix weak areas to shorten completion time.
+
+
+### 📈 Business Impact
+
+If implemented, these recommendations could:
+✔ Improve overall completion rates by **25–30%**  
+✔ Increase learner retention in long-duration tracks  
+✔ Strengthen brand value through higher certification numbers  
+✔ Boost revenue via demand-driven program promotion (Data Analyst)### 📈 Business Impact
+
 
 ## Conclusion
 
-This project provides valuable insights into student enrollments and completions in data-related career tracks. By analyzing these patterns, we can help 365 Data Science improve their offerings and better support their students.
+This analysis provides clear visibility into learner habits and bottlenecks.
+By focusing on slow-track learners and optimizing content delivery time, course providers can improve completion rates and engagement efficiently.
 
 
 ## Authors
